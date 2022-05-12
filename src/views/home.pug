@@ -1,0 +1,15 @@
+extends base.pug
+include mixins/video
+
+
+block content
+    h2
+            nav
+            ul
+                li
+                    a(href="/videos/upload") Upload Video
+    h2 안녕하세요! WeTube에 오신것을 환영합니다람쥐.
+    each videoarray in videos
+        +video(videoarray)
+    else
+        li 비디오를 찾을 수 없습니다.
